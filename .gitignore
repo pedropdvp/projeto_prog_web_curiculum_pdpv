@@ -1,0 +1,6 @@
+# IDE & Claude
+.claude/
+
+# Project docs (not part of website)
+*.docx
+*.url

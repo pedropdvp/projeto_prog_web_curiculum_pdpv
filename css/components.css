@@ -1,0 +1,339 @@
+/* ===== COMPONENTS ===== */
+
+/* --- Buttons --- */
+.btn {
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  opacity: 0.85;
+}
+
+/* --- Cards --- */
+.card {
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-accent {
+  border-left: 4px solid var(--accent);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* --- Summary Card (gradient) --- */
+.summary-card {
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* --- Contact Grid --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.6rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+}
+
+.contact-item .icon {
+  font-size: 1.1rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* --- Section Title --- */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+/* --- Index Grid (cards linking to pages) --- */
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.index-card {
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.index-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.index-card .card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.index-card .card-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* --- Timeline --- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--card-bg);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.timeline-date {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.timeline-desc a {
+  color: var(--accent);
+}
+
+.timeline-desc a:hover {
+  color: var(--accent-hover);
+}
+
+.timeline-desc ul {
+  margin-top: 0.5rem;
+}
+
+.timeline-desc ul li {
+  padding-left: 1.2rem;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-desc ul li::before {
+  content: '\2022';
+  color: var(--accent);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* --- Item List (courses, skills) --- */
+.item-list li {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1.8rem;
+  transition: background 0.2s ease;
+}
+
+.item-list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0.6rem;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* --- Skills Tags --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-1px);
+}
+
+/* --- Languages Table --- */
+.lang-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.lang-table th {
+  padding: 0.9rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.lang-table td {
+  padding: 0.8rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.lang-table tbody tr {
+  transition: background 0.2s;
+}
+
+.lang-level {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* --- Page Intro --- */
+.page-intro {
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  border-left: 4px solid var(--accent);
+}
+
+/* --- Content Section --- */
+.content-section {
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content-section h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .index-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .content-section { padding: 1.2rem; }
+  .card { padding: 1.2rem; }
+  .lang-table th, .lang-table td { padding: 0.6rem 0.8rem; font-size: 0.82rem; }
+}
